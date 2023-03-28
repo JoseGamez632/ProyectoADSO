@@ -1,0 +1,7 @@
+.fondo {
+    background-image: url(IMG/FondoIMG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter:blur (100px);
+}
