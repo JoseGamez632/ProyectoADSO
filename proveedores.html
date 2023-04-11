@@ -47,36 +47,37 @@
     
     <section class="proveedores y filt">
 
-      
-
-      <button 
-      class="btn btn-primary mt-5 ms-5" style="background-color: rgb(6, 48, 82); border-color: white;"
+      <button class="floating-button"
       type="button" data-bs-toggle="offcanvas" 
-      data-bs-target="#offcanvas" aria-controls="offcanvas">
-      Filtrar proveedores
-    </button>
+      data-bs-target="#offcanvas" aria-controls="offcanvas">Filtrar <br> Proveedores</button>
+
+
 
       <div class="col-3" style="background-color: rgb(39, 39, 39);">		
 
       <!-- Contenido de off canvas  -->
       <div  class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel" >
-        <div class="offcanvas-header">
-          <h3 class="offcanvas-title" style="color: rgb(219, 81, 20);">Filtro proveedores</h3>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
+
 
         
-        <div class="offcanvas-body" >
-          <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #d48311;"></i>
+        <div class="offcanvas-body" style="background-color: rgb(216, 213, 213);">
+
+          <div class="offcanvas-header">
+            <h3 class="offcanvas-title" style="color: rgb(219, 81, 20);">Filtro proveedores</h3>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          
           <div class="mb-3">
             <label for="" class="form-label"></label>
-            <textarea 
-            style="color: rgb(6, 48, 82); border-color: rgb(219, 81, 20);" 
-            class="form-control" name="PalabraFiltroProveedores" id="PalabraFiltroProveedores" rows="2"  >Nombre proveedor</textarea>
+            <h6 style="color: rgb(219, 81, 20);"><center>Nombre provedor</center> </h6>
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" spellcheck="false" data-ms-editor="true" style="border-color: rgb(219, 81, 20);">
+            <br>
+            <button class="btn btn-outline-success" type="submit" style="background-color: rgb(6, 48, 82); color: white; border-color: rgb(6, 48, 82);"> Buscar</button>
           </div>
 
 
           <div class="dropdown mt-4">
+            <h6 style="color: rgb(219, 81, 20);"><center>Estado proveedor</center> </h6>
             <button 
               class="btn btn-secondary dropdown-toggle" type="button"
               data-bs-toggle="dropdown" id="dropdownMenu"
@@ -84,15 +85,276 @@
               Acciones
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
-              <li><a href="#" class="dropdown-item">Opcion 1</a></li>
-              <li><a href="#" class="dropdown-item">Opcion 2</a></li>
+              <li><a href="#" class="dropdown-item">Activos</a></li>
+              <li><a href="#" class="dropdown-item">Inactivos</a></li>
+              <li><a href="#" class="dropdown-item">Ambos</a></li>
             </ul>
           </div>
         </div>
+        <button type="button" class="btn btn-outline-primary">Aplicar filtro</button>
       </div>
       <!-- Contenido de off canvas, end.  -->
     </div>
 
+    </section>
+
+    <section class="tablaProveedores" style="border-color: rgb(219, 81, 20); background-color: rgba(255, 255, 255, 0.788);">
+      <div class="col-1">
+        <br>
+      </div>
+      <div class="col-10">
+        <div class="col-12">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Primero</th>
+                <th scope="col">Último</th>
+                <th scope="col">Handle</th>
+                <th scope="col">Fila5</th>
+                <th scope="col">Fila6</th>
+                <th scope="col">Fila7</th>
+                <th scope="col">Fila8</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Columna5</td>
+                <td>Columna6</td>
+                <td>Columna7</td>
+                <td>Columna8</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-1">
+        <br>
+      </div>
     </section>
 
     <!-- ==========
