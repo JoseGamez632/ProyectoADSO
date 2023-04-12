@@ -7,7 +7,7 @@
 }
 
 .aplicarFilt{
-    background-color:blueviolet;
+    background-color:rgb(77, 16, 134);
     position: fixed;
     bottom: 50px;
     left: 150px;
@@ -15,15 +15,15 @@
 
 
   .floating-button {
-    position: fixed;
-    top: 700px;
-    left: 20px;
-    background-color: #db5114;
-    color: #fff;
+    margin-left: 5%;
+    top: 90px;
+    left: 50px;
+    background-color: #de8a13f1;
+    color: #ffffff;
     border: none;
-    border-radius: 50%;
-    padding: 12px 20px;
-    font-size: 16px;
+    border-radius: 5%;
+    padding: 4px 10px;
+    font-size: 18px;
     cursor: pointer;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.2s ease-in-out;
@@ -36,4 +36,10 @@
   
   .tablaProveedores{
     margin: 50px;
+  }
+
+
+  th, thead{
+    position: sticky;
+    top: 0;
   }

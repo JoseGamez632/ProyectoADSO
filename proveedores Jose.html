@@ -37,6 +37,11 @@
                     <a href="#" class="nav-item nav-link">Servicios</a>
                     <a href="#" class="nav-item nav-link disabled" tabindex="-1">Usuarios</a>
                 </div>
+                <button class="floating-button" class="btn btn-warning btn-rounded"
+                type="button" data-bs-toggle="offcanvas" 
+                data-bs-target="#offcanvas" aria-controls="offcanvas">Agregar o Filtrar Proveedores
+                </button>
+
                 <div class="navbar-nav ms-auto">
                     <a href="#" class="nav-item nav-link">Cerrar Sesión</a>
                 </div>
@@ -46,14 +51,6 @@
     </header>
     
     <section class="proveedores y filt">
-
-      <button class="floating-button"
-      type="button" data-bs-toggle="offcanvas" 
-      data-bs-target="#offcanvas" aria-controls="offcanvas">Filtrar <br> Proveedores</button>
-
-
-
-      <div class="col-3" style="background-color: rgb(39, 39, 39);">		
 
       <!-- Contenido de off canvas  -->
       <div  class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel" >
@@ -94,337 +91,217 @@
         <button type="button" class="btn btn-outline-primary">Aplicar filtro</button>
       </div>
       <!-- Contenido de off canvas, end.  -->
-    </div>
-
-    </section>
-
-    <section class="tablaProveedores" style="border-color: rgb(219, 81, 20); background-color: rgba(255, 255, 255, 0.788);">
-      <div class="col-1">
-        <br>
-      </div>
-      <div class="col-10">
-        <div class="col-12">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Primero</th>
-                <th scope="col">Último</th>
-                <th scope="col">Handle</th>
-                <th scope="col">Fila5</th>
-                <th scope="col">Fila6</th>
-                <th scope="col">Fila7</th>
-                <th scope="col">Fila8</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td>Columna5</td>
-                <td>Columna6</td>
-                <td>Columna7</td>
-                <td>Columna8</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="col-1">
-        <br>
       </div>
     </section>
 
-    <!-- ==========
-    <section class="pantalla inicio">
-      <h2 class="text-center display-4"><font color="#d64d1d">Inicio</font></h2>
-
-
-      <div class="container">
+    <section class="tablaProveedores" >
+      <div class="containes">
         <div class="row">
-          <div class="col-3">
-            <figure class="figure">
-              <img src="IMG/JoseGames_dino_cute_en_entrevista_de_trabajo_95c93525-55f5-4d02-a2ff-e35bf187745a.png" class="figure-img img-fluid rounded" alt="...">
-              <h4><figcaption class="figure-caption text-center display-6"><font color="#d64d1d">Proveedores</font></figcaption>
-              </h4>
-            </figure>
-          </div>
-
-          <div class="col-3">
-            <figure class="figure">
-              <img src="IMG/JoseGames_dino_cute_en_entrevista_de_trabajo_95c93525-55f5-4d02-a2ff-e35bf187745a.png" class="figure-img img-fluid rounded" alt="...">
-              <h4><figcaption class="figure-caption text-center display-6"><font color="#d64d1d">Proveedores</font></figcaption>
-              </figure>
-          </div>
-
-          <div class="col-3">
-            <figure class="figure">
-              <img src="IMG/JoseGames_dino_cute_en_entrevista_de_trabajo_95c93525-55f5-4d02-a2ff-e35bf187745a.png" class="figure-img img-fluid rounded" alt="...">
-              <h4><figcaption class="figure-caption text-center display-6"><font color="#d64d1d">Proveedores</font></figcaption>
-              </figure>
-          </div>
-          <div class="col-3">
-            <figure class="figure">
-              <img src="IMG/JoseGames_dino_cute_en_entrevista_de_trabajo_95c93525-55f5-4d02-a2ff-e35bf187745a.png" class="figure-img img-fluid rounded" alt="...">
-              <h4><figcaption class="figure-caption text-center display-6"><font color="#d64d1d">Proveedores</font></figcaption>
-              </figure>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-3">
-            <figure class="figure">
-              <img src="IMG/JoseGames_dino_cute_en_entrevista_de_trabajo_95c93525-55f5-4d02-a2ff-e35bf187745a.png" class="figure-img img-fluid rounded" alt="...">
-              <h4><figcaption class="figure-caption text-center display-6"><font color="#d64d1d">Proveedores</font></figcaption>
-              </figure>
-          </div>
-
-          <div class="col-3">
-            <figure class="figure">
-              <img src="IMG/JoseGames_dino_cute_en_entrevista_de_trabajo_95c93525-55f5-4d02-a2ff-e35bf187745a.png" class="figure-img img-fluid rounded" alt="...">
-              <h4><figcaption class="figure-caption text-center display-6"><font color="#d64d1d">Proveedores</font></figcaption>
-              </figure>
-          </div>
-
-          <div class="col-3">
-            <figure class="figure">
-              <img src="IMG/JoseGames_dino_cute_en_entrevista_de_trabajo_95c93525-55f5-4d02-a2ff-e35bf187745a.png" class="figure-img img-fluid rounded" alt="...">
-              <h4><figcaption class="figure-caption text-center display-6"><font color="#d64d1d">Proveedores</font></figcaption>
-              </figure>
-          </div>
-          <div class="col-3">
-            <figure class="figure">
-              <img src="IMG/JoseGames_dino_cute_en_entrevista_de_trabajo_95c93525-55f5-4d02-a2ff-e35bf187745a.png" class="figure-img img-fluid rounded" alt="...">
-              <h4><figcaption class="figure-caption text-center display-6"><font color="#d64d1d">Proveedores</font></figcaption>
-              </figure>
+          <div class="col">
+            <div class="table-responsive"  style="background-color: rgba(255, 255, 255, 0.753);">
+              <table class="table table-bordered" style="border-color: rgba(6, 48, 82, 0.589); color: rgb(6, 48, 82);">
+                <thead>
+                  <tr style="background-color: rgba(219, 80, 20, 0.644);">
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre Proveedor</th>
+                    <th scope="col">NIT</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Metódo de Pago</th>
+                    <th scope="col">Encargado</th>
+                    <th scope="col">Documento</th>
+                    <th scope="col">Tipo Doc</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Cueros Marco Polo</td>
+                    <td>89073646</td>
+                    <td>7552000</td>
+                    <td>Efectivo</td>
+                    <td>Juan Torres</td>
+                    <td>1022738233</td>
+                    <td>C.C.</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Cueros Marco Polo</td>
+                    <td>89073646</td>
+                    <td>7552000</td>
+                    <td>Efectivo</td>
+                    <td>Juan Torres</td>
+                    <td>1022738233</td>
+                    <td>C.C.</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Cueros Marco Polo</td>
+                    <td>89073646</td>
+                    <td>7552000</td>
+                    <td>Efectivo</td>
+                    <td>Juan Torres</td>
+                    <td>1022738233</td>
+                    <td>C.C.</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Cueros Marco Polo</td>
+                    <td>89073646</td>
+                    <td>7552000</td>
+                    <td>Efectivo</td>
+                    <td>Juan Torres</td>
+                    <td>1022738233</td>
+                    <td>C.C.</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Cueros Marco Polo</td>
+                    <td>89073646</td>
+                    <td>7552000</td>
+                    <td>Efectivo</td>
+                    <td>Juan Torres</td>
+                    <td>1022738233</td>
+                    <td>C.C.</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Cueros Marco Polo</td>
+                    <td>89073646</td>
+                    <td>7552000</td>
+                    <td>Efectivo</td>
+                    <td>Juan Torres</td>
+                    <td>1022738233</td>
+                    <td>C.C.</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Cueros Marco Polo</td>
+                    <td>89073646</td>
+                    <td>7552000</td>
+                    <td>Efectivo</td>
+                    <td>Juan Torres</td>
+                    <td>1022738233</td>
+                    <td>C.C.</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Cueros Marco Polo</td>
+                    <td>89073646</td>
+                    <td>7552000</td>
+                    <td>Efectivo</td>
+                    <td>Juan Torres</td>
+                    <td>1022738233</td>
+                    <td>C.C.</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Cueros Marco Polo</td>
+                    <td>89073646</td>
+                    <td>7552000</td>
+                    <td>Efectivo</td>
+                    <td>Juan Torres</td>
+                    <td>1022738233</td>
+                    <td>C.C.</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Cueros Marco Polo</td>
+                    <td>89073646</td>
+                    <td>7552000</td>
+                    <td>Efectivo</td>
+                    <td>Juan Torres</td>
+                    <td>1022738233</td>
+                    <td>C.C.</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Cueros Marco Polo</td>
+                    <td>89073646</td>
+                    <td>7552000</td>
+                    <td>Efectivo</td>
+                    <td>Juan Torres</td>
+                    <td>1022738233</td>
+                    <td>C.C.</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Cueros Marco Polo</td>
+                    <td>89073646</td>
+                    <td>7552000</td>
+                    <td>Efectivo</td>
+                    <td>Juan Torres</td>
+                    <td>1022738233</td>
+                    <td>C.C.</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Cueros Marco Polo</td>
+                    <td>89073646</td>
+                    <td>7552000</td>
+                    <td>Efectivo</td>
+                    <td>Juan Torres</td>
+                    <td>1022738233</td>
+                    <td>C.C.</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Cueros Marco Polo</td>
+                    <td>89073646</td>
+                    <td>7552000</td>
+                    <td>Efectivo</td>
+                    <td>Juan Torres</td>
+                    <td>1022738233</td>
+                    <td>C.C.</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Cueros Marco Polo</td>
+                    <td>89073646</td>
+                    <td>7552000</td>
+                    <td>Efectivo</td>
+                    <td>Juan Torres</td>
+                    <td>1022738233</td>
+                    <td>C.C.</td>
+                    <td>XXXX</td>
+                    <td>XXXX</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-      
     </section>
-    ========== -->
 
     <footer>
       <footer class="bg-light text-center text-lg-start">
