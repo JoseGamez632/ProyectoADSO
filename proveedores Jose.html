@@ -13,12 +13,14 @@
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
+    
+
     <title>Proveedores</title>
   </head>
   <body class="fondo">
     
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="opacity: 90%; ">
         <div class="container-fluid">
             <a href="#" class="navbar-brand">
                 <img src="IMG/IMG LOGO.png" height="85" alt="Logo">
@@ -50,35 +52,39 @@
     </nav>
     </header>
     
-    <section class="proveedores y filt">
+    <section class="proveedores y filt" >
+
 
       <!-- Contenido de off canvas  -->
-      <div  class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel" >
+      <div  class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel" 
+      style="background-image: url(https://img.freepik.com/vector-gratis/vista-superior-cocina-salon-estudio-o-hotel-ilustracion-dibujos-animados-vectoriales-interior-habitacion-acogedora-mesa-sillas-estufa-televisor-estanterias-plantas-banco-almohadas_107791-11307.jpg?w=900&t=st=1681532747~exp=1681533347~hmac=46f4d72dfacc1a7bcd81611a79bc22f36a051980b71b8dfef7d2e502cbaadd12);">
 
 
         
-        <div class="offcanvas-body" style="background-color: rgb(216, 213, 213);">
+        <div class="offcanvas-body">
 
           <div class="offcanvas-header">
-            <h3 class="offcanvas-title" style="color: rgb(219, 81, 20);">Filtro proveedores</h3>
+            <h3 class="offcanvas-title" style="color: rgb(255, 255, 255);">Filtro proveedores</h3>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           
           <div class="mb-3">
             <label for="" class="form-label"></label>
-            <h6 style="color: rgb(219, 81, 20);"><center>Nombre provedor</center> </h6>
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" spellcheck="false" data-ms-editor="true" style="border-color: rgb(219, 81, 20);">
+            <center><h4 style="color: rgb(6, 48, 82); background-color: rgba(255, 255, 255, 0.349);">Nombre provedor</h4></center>
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" spellcheck="false" data-ms-editor="true" style="border-color: rgb(255, 255, 255);">
             <br>
-            <button class="btn btn-outline-success" type="submit" style="background-color: rgb(6, 48, 82); color: white; border-color: rgb(6, 48, 82);"> Buscar</button>
+            <center>
+              <button class="btn btn-outline-success" type="submit" style="background-color: rgb(6, 48, 82); color: white; border-color: rgb(6, 48, 82);"> Buscar</button>
+            </center>
           </div>
-
-
+          <hr size="10">
           <div class="dropdown mt-4">
-            <h6 style="color: rgb(219, 81, 20);"><center>Estado proveedor</center> </h6>
-            <button 
+            <center><h4 style="color: rgb(6, 48, 82); background-color: rgba(255, 255, 255, 0.349);">Estado proveedor</h4></center>
+            
+            <center>
+              <button 
               class="btn btn-secondary dropdown-toggle" type="button"
-              data-bs-toggle="dropdown" id="dropdownMenu"
-            >
+              data-bs-toggle="dropdown" id="dropdownMenu" style="background-color: rgb(6, 48, 82);">
               Acciones
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
@@ -86,6 +92,16 @@
               <li><a href="#" class="dropdown-item">Inactivos</a></li>
               <li><a href="#" class="dropdown-item">Ambos</a></li>
             </ul>
+            </center>
+            <br>
+            <hr size="10">
+            <center><h4 style="color: rgb(6, 48, 82); background-color: rgba(255, 255, 255, 0.349);">Acciones</h4></center>
+            <div class="d-grid gap-2">
+              <button style="position: relative;" type="button" name="descargarBase" id="descargarBase" class="btn btn-primary"> <img src="https://img.freepik.com/iconos-gratis/sobresalir_318-688876.jpg" width="20px" > Descargar tabla</button>
+              <button style="position: relative;" type="button" name="descargarBase" id="descargarBase" class="btn btn-primary"> <img src="https://img.freepik.com/iconos-gratis/sobresalir_318-688876.jpg" width="20px" > Descargar tabla</button>
+
+            </div>
+            
           </div>
         </div>
         <button type="button" class="btn btn-outline-primary">Aplicar filtro</button>
