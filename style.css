@@ -1,5 +1,5 @@
 .fondo {
-    background-image: url(https://img.freepik.com/foto-gratis/muestras-textura-tela-multicolor_1373-434.jpg?w=740&t=st=1681533497~exp=1681534097~hmac=d73b07135c9823387ff4f266e2172bc73bcc9359fa148cdaff5965738d05e5f9);
+    background-image: url(https://img.freepik.com/foto-gratis/vista-superior-hilo-tijeras-espacio-copia_23-2148739390.jpg?w=740&t=st=1681788394~exp=1681788994~hmac=cea91026b1ed138cab16273fd7caaf41cb8dbd5a58086b6860a3d443c7b4bd92);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,4 +46,14 @@
 
   #dropdownMenu {
     text-align: center;
+  }
+
+  #SuptitulosFiltro {
+    font-family:verdana;
+    font-size:50px;
+    color:white;
+    text-shadow: 1px  0px 0px rgb(255, 255, 255),
+                 0px  1px 0px rgb(255, 255, 255),
+                -1px  0px 0px rgb(255, 255, 255),
+                 0px -1px 0px rgb(255, 255, 255);
   }

@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleTabla.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <!-- Font awesome -->
@@ -57,7 +58,7 @@
 
       <!-- Contenido de off canvas  -->
       <div  class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel" 
-      style="background-image: url(https://img.freepik.com/vector-gratis/vista-superior-cocina-salon-estudio-o-hotel-ilustracion-dibujos-animados-vectoriales-interior-habitacion-acogedora-mesa-sillas-estufa-televisor-estanterias-plantas-banco-almohadas_107791-11307.jpg?w=900&t=st=1681532747~exp=1681533347~hmac=46f4d72dfacc1a7bcd81611a79bc22f36a051980b71b8dfef7d2e502cbaadd12);">
+      style="background-image: url(https://img.freepik.com/foto-gratis/arreglo-cuero-naranja-vista-superior_23-2148897979.jpg?w=360&t=st=1681788465~exp=1681789065~hmac=95af19e7733e7d01a29be0e8957a1e0706cf64e12f9c4baa2446281cc58a850f);">
 
 
         
@@ -70,7 +71,7 @@
           
           <div class="mb-3">
             <label for="" class="form-label"></label>
-            <center><h4 style="color: rgb(6, 48, 82); background-color: rgba(255, 255, 255, 0.349);">Nombre provedor</h4></center>
+            <center id="SuptitulosFiltro"><h4 style="color: rgb(6, 48, 82);">Nombre provedor</h4></center>
             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" spellcheck="false" data-ms-editor="true" style="border-color: rgb(255, 255, 255);">
             <br>
             <center>
@@ -79,7 +80,7 @@
           </div>
           <hr size="10">
           <div class="dropdown mt-4">
-            <center><h4 style="color: rgb(6, 48, 82); background-color: rgba(255, 255, 255, 0.349);">Estado proveedor</h4></center>
+            <center id="SuptitulosFiltro" ><h4 style="color: rgb(6, 48, 82);">Estado proveedor</h4></center>
             
             <center>
               <button 
@@ -95,10 +96,12 @@
             </center>
             <br>
             <hr size="10">
-            <center><h4 style="color: rgb(6, 48, 82); background-color: rgba(255, 255, 255, 0.349);">Acciones</h4></center>
+            <center id="SuptitulosFiltro"><h4 style="color: rgb(6, 48, 82);">Acciones</h4></center>
             <div class="d-grid gap-2">
-              <button style="position: relative;" type="button" name="descargarBase" id="descargarBase" class="btn btn-primary"> <img src="https://img.freepik.com/iconos-gratis/sobresalir_318-688876.jpg" width="20px" > Descargar tabla</button>
-              <button style="position: relative;" type="button" name="descargarBase" id="descargarBase" class="btn btn-primary"> <img src="https://img.freepik.com/iconos-gratis/sobresalir_318-688876.jpg" width="20px" > Descargar tabla</button>
+              <button style="position: relative; background-color: rgba(219, 80, 20, 0.644); border-color: rgb(6, 48, 82)" type="button" name="descargarBase" id="descargarBase" class="btn btn-primary"> 
+                <img src="https://img.freepik.com/iconos-gratis/sobresalir_318-688876.jpg" width="20px" > Descargar tabla</button>
+              <button style="position: relative; background-color: rgba(219, 80, 20, 0.644); border-color: rgb(6, 48, 82);" type="button" name="descargarBase" id="descargarBase" class="btn btn-primary"> 
+                <i class="fa-solid fa-plus"></i>  Agregar Proveedor</button>
 
             </div>
             
@@ -110,6 +113,7 @@
       </div>
     </section>
 
+    
     <section class="tablaProveedores" >
       <div class="containes">
         <div class="row">
@@ -119,20 +123,21 @@
                 <thead>
                   <tr style="background-color: rgba(219, 80, 20, 0.644);">
                     <th scope="col">#</th>
-                    <th scope="col">Nombre Proveedor</th>
-                    <th scope="col">NIT</th>
-                    <th scope="col">Teléfono</th>
-                    <th scope="col">Metódo de Pago</th>
-                    <th scope="col">Encargado</th>
-                    <th scope="col">Documento</th>
-                    <th scope="col">Tipo Doc</th>
-                    <th scope="col">Estado</th>
-                    <th scope="col">Acciones</th>
+                    <th scope="col"><center>Editar</center></th>
+                    <th scope="col"><center>Nombre Proveedor</center></th>
+                    <th scope="col"><center>NIT</center></th>
+                    <th scope="col"><center>Teléfono</center></th>
+                    <th scope="col"><center>Metódo de Pago</center></th>
+                    <th scope="col"><center>Encargado</center></th>
+                    <th scope="col"><center>Documento</center></th>
+                    <th scope="col"><center>Tipo Doc</center></th>
+                    <th scope="col"><center>Estado</center></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
+                    <td><button type="button" class="btn btn" style="background-color: rgb(33, 90, 138);"><i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i></button></td>
                     <td>Cueros Marco Polo</td>
                     <td>89073646</td>
                     <td>7552000</td>
@@ -140,11 +145,13 @@
                     <td>Juan Torres</td>
                     <td>1022738233</td>
                     <td>C.C.</td>
-                    <td>XXXX</td>
-                    <td>XXXX</td>
+                    <td><div class="alert alert-success" role="alert">
+                      <center>Activo</center>
+                    </div></td>
                   </tr>
                   <tr>
                     <th scope="row">1</th>
+                    <td><button type="button" class="btn btn" style="background-color: rgb(33, 90, 138);"><i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i></button></td>
                     <td>Cueros Marco Polo</td>
                     <td>89073646</td>
                     <td>7552000</td>
@@ -152,11 +159,13 @@
                     <td>Juan Torres</td>
                     <td>1022738233</td>
                     <td>C.C.</td>
-                    <td>XXXX</td>
-                    <td>XXXX</td>
+                    <td><div class="alert alert-danger" role="alert">
+                      <center>Desactivado</center>
+                    </div></td>
                   </tr>
                   <tr>
                     <th scope="row">1</th>
+                    <td><button type="button" class="btn btn" style="background-color: rgb(33, 90, 138);"><i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i></button></td>
                     <td>Cueros Marco Polo</td>
                     <td>89073646</td>
                     <td>7552000</td>
@@ -164,11 +173,13 @@
                     <td>Juan Torres</td>
                     <td>1022738233</td>
                     <td>C.C.</td>
-                    <td>XXXX</td>
-                    <td>XXXX</td>
+                    <td><div class="alert alert-success" role="alert">
+                      <center>Activo</center>
+                    </div></td>
                   </tr>
                   <tr>
                     <th scope="row">1</th>
+                    <td><button type="button" class="btn btn" style="background-color: rgb(33, 90, 138);"><i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i></button></td>
                     <td>Cueros Marco Polo</td>
                     <td>89073646</td>
                     <td>7552000</td>
@@ -176,11 +187,26 @@
                     <td>Juan Torres</td>
                     <td>1022738233</td>
                     <td>C.C.</td>
-                    <td>XXXX</td>
-                    <td>XXXX</td>
+                    <td><div class="alert alert-danger" role="alert">
+                      <center>Desactivado</center>
+                    </div></td>
+                  </tr>                  <tr>
+                    <th scope="row">1</th>
+                    <td><button type="button" class="btn btn" style="background-color: rgb(33, 90, 138);"><i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i></button></td>
+                    <td>Cueros Marco Polo</td>
+                    <td>89073646</td>
+                    <td>7552000</td>
+                    <td>Efectivo</td>
+                    <td>Juan Torres</td>
+                    <td>1022738233</td>
+                    <td>C.C.</td>
+                    <td><div class="alert alert-success" role="alert">
+                      <center>Activo</center>
+                    </div></td>
                   </tr>
                   <tr>
                     <th scope="row">1</th>
+                    <td><button type="button" class="btn btn" style="background-color: rgb(33, 90, 138);"><i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i></button></td>
                     <td>Cueros Marco Polo</td>
                     <td>89073646</td>
                     <td>7552000</td>
@@ -188,128 +214,9 @@
                     <td>Juan Torres</td>
                     <td>1022738233</td>
                     <td>C.C.</td>
-                    <td>XXXX</td>
-                    <td>XXXX</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Cueros Marco Polo</td>
-                    <td>89073646</td>
-                    <td>7552000</td>
-                    <td>Efectivo</td>
-                    <td>Juan Torres</td>
-                    <td>1022738233</td>
-                    <td>C.C.</td>
-                    <td>XXXX</td>
-                    <td>XXXX</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Cueros Marco Polo</td>
-                    <td>89073646</td>
-                    <td>7552000</td>
-                    <td>Efectivo</td>
-                    <td>Juan Torres</td>
-                    <td>1022738233</td>
-                    <td>C.C.</td>
-                    <td>XXXX</td>
-                    <td>XXXX</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Cueros Marco Polo</td>
-                    <td>89073646</td>
-                    <td>7552000</td>
-                    <td>Efectivo</td>
-                    <td>Juan Torres</td>
-                    <td>1022738233</td>
-                    <td>C.C.</td>
-                    <td>XXXX</td>
-                    <td>XXXX</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Cueros Marco Polo</td>
-                    <td>89073646</td>
-                    <td>7552000</td>
-                    <td>Efectivo</td>
-                    <td>Juan Torres</td>
-                    <td>1022738233</td>
-                    <td>C.C.</td>
-                    <td>XXXX</td>
-                    <td>XXXX</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Cueros Marco Polo</td>
-                    <td>89073646</td>
-                    <td>7552000</td>
-                    <td>Efectivo</td>
-                    <td>Juan Torres</td>
-                    <td>1022738233</td>
-                    <td>C.C.</td>
-                    <td>XXXX</td>
-                    <td>XXXX</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Cueros Marco Polo</td>
-                    <td>89073646</td>
-                    <td>7552000</td>
-                    <td>Efectivo</td>
-                    <td>Juan Torres</td>
-                    <td>1022738233</td>
-                    <td>C.C.</td>
-                    <td>XXXX</td>
-                    <td>XXXX</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Cueros Marco Polo</td>
-                    <td>89073646</td>
-                    <td>7552000</td>
-                    <td>Efectivo</td>
-                    <td>Juan Torres</td>
-                    <td>1022738233</td>
-                    <td>C.C.</td>
-                    <td>XXXX</td>
-                    <td>XXXX</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Cueros Marco Polo</td>
-                    <td>89073646</td>
-                    <td>7552000</td>
-                    <td>Efectivo</td>
-                    <td>Juan Torres</td>
-                    <td>1022738233</td>
-                    <td>C.C.</td>
-                    <td>XXXX</td>
-                    <td>XXXX</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Cueros Marco Polo</td>
-                    <td>89073646</td>
-                    <td>7552000</td>
-                    <td>Efectivo</td>
-                    <td>Juan Torres</td>
-                    <td>1022738233</td>
-                    <td>C.C.</td>
-                    <td>XXXX</td>
-                    <td>XXXX</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Cueros Marco Polo</td>
-                    <td>89073646</td>
-                    <td>7552000</td>
-                    <td>Efectivo</td>
-                    <td>Juan Torres</td>
-                    <td>1022738233</td>
-                    <td>C.C.</td>
-                    <td>XXXX</td>
-                    <td>XXXX</td>
+                    <td><div class="alert alert-danger" role="alert">
+                      <center>Desactivado</center>
+                    </div></td>
                   </tr>
                 </tbody>
               </table>
@@ -317,8 +224,134 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
 
+    <!--
+    <section class="tablaProveedores2" >
+      <div class="container">
+          <div class="row">
+              <div class="col-md-offset-1 col-md-10">
+                  <div class="panel">
+                      <div class="panel-heading">
+                          <div class="row">
+                              <div class="col-sm-12 col-xs-12">
+                                  <a href="#" class="btn btn-sm btn-primary pull-left"><i class="fa fa-plus-circle"></i> Add New</a>
+                                  <form class="form-horizontal pull-right">
+                                      <div class="form-group">
+                                          <label>Show : </label>
+                                          <select class="form-control">
+                                              <option>5</option>
+                                              <option>10</option>
+                                              <option>15</option>
+                                              <option>20</option>
+                                          </select>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="panel-body table-responsive">
+                          <table class="table">
+                              <thead>
+                                  <tr>
+                                      <th>Action</th>
+                                      <th>#</th>
+                                      <th>Name</th>
+                                      <th>Age</th>
+                                      <th>View</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>
+                                          <ul class="action-list">
+                                              <li><a href="#" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a></li>
+                                              <li><a href="#" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                                          </ul>
+                                      </td>
+                                      <td>1</td>
+                                      <td>Vincent Williamson</td>
+                                      <td>31</td>
+                                      <td><a href="#" class="btn btn-sm btn-success"><i class="fa fa-search"></i></a></td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <ul class="action-list">
+                                              <li><a href="#" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a></li>
+                                              <li><a href="#" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                                          </ul>
+                                      </td>
+                                      <td>2</td>
+                                      <td>Taylor Reyes</td>
+                                      <td>22</td>
+                                      <td><a href="#" class="btn btn-sm btn-success"><i class="fa fa-search"></i></a></td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <ul class="action-list">
+                                              <li><a href="#" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a></li>
+                                              <li><a href="#" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                                          </ul>
+                                      </td>
+                                      <td>3</td>
+                                      <td>Justin Block</td>
+                                      <td>26</td>
+                                      <td><a href="#" class="btn btn-sm btn-success"><i class="fa fa-search"></i></a></td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <ul class="action-list">
+                                              <li><a href="#" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a></li>
+                                              <li><a href="#" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                                          </ul>
+                                      </td>
+                                      <td>4</td>
+                                      <td>Sean Guzman</td>
+                                      <td>26</td>
+                                      <td><a href="#" class="btn btn-sm btn-success"><i class="fa fa-search"></i></a></td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          <ul class="action-list">
+                                              <li><a href="#" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a></li>
+                                              <li><a href="#" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                                          </ul>
+                                      </td>
+                                      <td>5</td>
+                                      <td>Keith Carter</td>
+                                      <td>24</td>
+                                      <td><a href="#" class="btn btn-sm btn-success"><i class="fa fa-search"></i></a></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                      <div class="panel-footer">
+                          <div class="row">
+                              <div class="col-sm-6 col-xs-6">showing <b>5</b> out of <b>25</b> entries</div>
+                              <div class="col-sm-6 col-xs-6">
+                                  <ul class="pagination hidden-xs pull-right">
+                                      <li><a href="#">«</a></li>
+                                      <li class="active"><a href="#">1</a></li>
+                                      <li><a href="#">2</a></li>
+                                      <li><a href="#">3</a></li>
+                                      <li><a href="#">4</a></li>
+                                      <li><a href="#">5</a></li>
+                                      <li><a href="#">»</a></li>
+                                  </ul>
+                                  <ul class="pagination visible-xs pull-right">
+                                      <li><a href="#">«</a></li>
+                                      <li><a href="#">»</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    </section>-->
+    
     <footer>
       <footer class="bg-light text-center text-lg-start">
         <!-- Copyright -->
