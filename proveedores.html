@@ -43,11 +43,11 @@
             );
     </script>
   <body class="fondo">
-    
+    <!-- Barran superior.  -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light"  style="background-image: url(https://img.freepik.com/vector-gratis/fondo-blanco-minimo-hexagonos_79603-1452.jpg?w=1380&t=st=1687031635~exp=1687032235~hmac=b6edce497094422b856cdb7557bebe7d81f867068ee451ccbd9e7f3f9631595b); opacity: 90%; ">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">
+            <a href="index.html" class="navbar-brand">
                 <img src="IMG/IMG LOGO.png" height="85" alt="Logo">
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -55,12 +55,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav">
-                    <a href="#" class="nav-item nav-link active">Proveedores</a>
-                    <a href="#" class="nav-item nav-link">Compras</a>
-                    <a href="#" class="nav-item nav-link">Productos</a>
-                    <a href="#" class="nav-item nav-link">Ventas</a>
-                    <a href="#" class="nav-item nav-link">Cliente</a>
-                    <a href="#" class="nav-item nav-link">Insumos</a>
+                    <a href="proveedores.html" class="nav-item nav-link active">Proveedores</a>
+                    <a href="compras.html" class="nav-item nav-link">Compras</a>
+                    <a href="productos.html" class="nav-item nav-link">Productos</a>
+                    <a href="ventas.html" class="nav-item nav-link">Ventas</a>
+                    <a href="insumos.html" class="nav-item nav-link">Cliente</a>
+                    <a href="insumos.html" class="nav-item nav-link">Insumos</a>
                     <a href="#" class="nav-item nav-link">Servicios</a>
                     <a href="#" class="nav-item nav-link disabled" tabindex="-1">Usuarios</a>
                 </div>
@@ -76,7 +76,7 @@
         </div>
     </nav>
     </header>
-    
+    <!-- Botón agegar nuevo proveedor.  -->
     <section class="proveedores y filt" >
 
 
@@ -92,52 +92,86 @@
             <h3 class="offcanvas-title" style="color: rgb(255, 255, 255);"><i class="fa-solid fa-person-circle-plus" style="color: white;"></i> Datos Proveedor</h3>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-          
           <div class="mb-3" size="20">
-            <label for="" class="form-label"></label>
-            <center id="SuptitulosFiltro"><h4 style="color: rgb(6, 48, 82);">Nombre provedor</h4></center>
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" spellcheck="false" data-ms-editor="true" style="border-color: rgb(255, 255, 255);">
-            <br>
-            <center>
-              <button class="btn btn-outline-success" type="submit" style="background-color: rgb(6, 48, 82); color: white; border-color: rgb(6, 48, 82);"> Buscar</button>
-            </center>
-          </div>
-          <hr size="20">
-          <div class="dropdown mt-4">
-            <center id="SuptitulosFiltro" ><h4 style="color: rgb(6, 48, 82);">Estado proveedor</h4></center>
-            
-            <center>
-              <button 
-              class="btn btn-secondary dropdown-toggle" type="button"
-              data-bs-toggle="dropdown" id="dropdownMenu" style="background-color: rgb(6, 48, 82);">
-              Acciones
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
-              <li><a href="#" class="dropdown-item">Activos</a></li>
-              <li><a href="#" class="dropdown-item">Inactivos</a></li>
-              <li><a href="#" class="dropdown-item">Ambos</a></li>
-            </ul>
-            </center>
-            <br>
-            <hr size="10">
-            <center id="SuptitulosFiltro"><h4 style="color: rgb(6, 48, 82);">Acciones</h4></center>
-            <div class="d-grid gap-2">
-              <button style="position: relative; background-color: rgba(6, 48, 82, 0.678); border-color: rgb(255, 255, 255)" type="button" name="descargarBase" id="descargarBase" class="btn btn-primary"> 
-                <img src="https://img.freepik.com/iconos-gratis/sobresalir_318-688876.jpg" width="20px" > Descargar tabla</button>
-              <button style="position: relative; background-color: rgb(6, 48, 82, 0.678); border-color: rgb(255, 255, 255);" type="button" name="descargarBase" id="descargarBase" class="btn btn-primary"> 
-                <i class="fa-solid fa-plus"></i>  Agregar Proveedor</button>
-
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+              <div class="valid-feedback">
+                ¡Dato Valido!
+              </div>
+              <div class="invalid-feedback">
+                Por favor, elije un nombre para el proveedor.
+              </div>
+              <label for="floatingInput" for="validationCustom01" class="form-label">Nombre Proveedor</label>
             </div>
-            
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+              <div class="valid-feedback">
+                ¡Dato Valido!
+              </div>
+              <div class="invalid-feedback">
+                Por favor, elije un NIT para el proveedor.
+              </div>
+              <label for="floatingInput" for="validationCustom01" class="form-label">NIT</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+              <div class="valid-feedback">
+                ¡Dato Valido!
+              </div>
+              <div class="invalid-feedback">
+                Por favor, elije un teléfono para el proveedor.
+              </div>
+              <label for="floatingInput" for="validationCustom01" class="form-label">Teléfono</label>
+            </div>
+            <div class="mb-3">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Selecciona un método de pago</option>
+                <option value="1">Transferencia</option>
+                <option value="2">Efectivo</option>
+                <option value="3">Tarjeta</option>
+              </select>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+              <div class="valid-feedback">
+                ¡Dato Valido!
+              </div>
+              <div class="invalid-feedback">
+                Por favor, elije un teléfono para el proveedor.
+              </div>
+              <label for="floatingInput" for="validationCustom01" class="form-label">Nombre Encargado</label>
+            </div>
+            <div class="mb-3">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Tipo documento encargado</option>
+                <option value="1">Cédula</option>
+                <option value="2">Pasaporte</option>
+                <option value="3">PEP</option>
+              </select>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+              <div class="valid-feedback">
+                ¡Dato Valido!
+              </div>
+              <div class="invalid-feedback">
+                Por favor, elije un numero de documento para el proveedor.
+              </div>
+              <label for="floatingInput" for="validationCustom01" class="form-label">Numero Documento</label>
+            </div>
           </div>
+          <center>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Enviar formulario</button>
+            </div>
+          </center>
         </div>
-        <button type="button" class="btn btn-outline-primary" style="color: white;">Aplicar filtro</button>
+        
       </div>
       <!-- Contenido de off canvas, end.  -->
       </div>
     </section>
-
-
+    <!-- Tabla.  -->
     <section class="tablaProveedores" 
     <div class="containes">
       <div class="row">
@@ -153,7 +187,8 @@
                       <th>Encargado</th><font></font>
                       <th>Tipo Documento</th><font></font>
                       <th>Documento</th><font></font>
-                      <th>Acciones</th><font></font>
+                      <th>Editar</th><font></font>
+                      <th>Estado actual</th><font></font>
                   </tr><font></font>
               </thead><font></font>
               <tbody style="background-color: rgb(255, 255, 255); opacity: 80%;"><font></font>
@@ -166,8 +201,14 @@
                       <td>Row Data 6</td><font></font>
                       <td>Row Data 7</td><font></font>
                       <td>
-                        <i class="fa-solid fa-pen-to-square" style="color: green;" ></i>
-                        <i class="fa-regular fa-circle-check" style="color: green;" ></i></td><font></font>
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
+                        <td>
+                        <!-- Checked switch -->
+                        <div class="form-check form-check-inline form-switch">
+                          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                          <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                        </div>
+                        </td><font></font>
                   </tr><font></font>
                   <tr><font></font>
                     <td>Row Data 1</td><font></font>
@@ -178,8 +219,14 @@
                     <td>Row Data 6</td><font></font>
                     <td>Row Data 7</td><font></font>
                     <td>
-                      <i class="fa-solid fa-pen-to-square" style="color: green;"></i>
-                      <i class="fa-regular fa-circle-xmark" style="color: red;"></i>
+                      <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
+                      <td>
+                      <!-- Checked switch -->
+                      <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                      </div>
+                      </td><font></font>
                   </tr><font></font>
                   <tr><font></font>
                     <td>Row Data 1</td><font></font>
@@ -190,8 +237,32 @@
                     <td>Row Data 6</td><font></font>
                     <td>Row Data 7</td><font></font>
                     <td>
-                      <i class="fa-solid fa-pen-to-square" style="color: green;" ></i>
-                      <i class="fa-regular fa-circle-check" style="color: green;" ></i></td><font></font>
+                      <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
+                      <td>
+                      <!-- Checked switch -->
+                      <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                      </div>
+                      </td><font></font>
+                  </tr><font></font>
+                  <tr><font></font>
+                    <td>Row Data 1</td><font></font>
+                    <td>Row Data 2</td><font></font>
+                    <td>Row Data 3</td><font></font>
+                    <td>Row Data 4</td><font></font>
+                    <td>Row Data 5</td><font></font>
+                    <td>Row Data 6</td><font></font>
+                    <td>Row Data 7</td><font></font>
+                    <td>
+                      <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
+                      <td>
+                      <!-- Checked switch -->
+                      <div class="form-check form-check-inline form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                      </div>
+                      </td><font></font>
                   </tr><font></font>
                   <tr><font></font>
                   <td>Row Data 1</td><font></font>
@@ -202,44 +273,32 @@
                   <td>Row Data 6</td><font></font>
                   <td>Row Data 7</td><font></font>
                   <td>
-                    <i class="fa-solid fa-pen-to-square" style="color: green;" ></i>
-                    <i class="fa-regular fa-circle-xmark" style="color: red;"></i>
+                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
+                    <td>
+                    <!-- Checked switch -->
+                    <div class="form-check form-check-inline form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                      <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                    </div>
+                    </td><font></font>
                   </tr><font></font>
                   <tr><font></font>
-                  <td>Row Data 1</td><font></font>
-                  <td>Row Data 2</td><font></font>
-                  <td>Row Data 3</td><font></font>
-                  <td>Row Data 4</td><font></font>
-                  <td>Row Data 5</td><font></font>
-                  <td>Row Data 6</td><font></font>
-                  <td>Row Data 7</td><font></font>
+                <td>Row Data 1</td><font></font>
+                <td>Row Data 2</td><font></font>
+                <td>Row Data 3</td><font></font>
+                <td>Row Data 4</td><font></font>
+                <td>Row Data 5</td><font></font>
+                <td>Row Data 6</td><font></font>
+                <td>Row Data 7</td><font></font>
+                <td>
+                  <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
                   <td>
-                    <i class="fa-solid fa-pen-to-square" style="color: green;" ></i>
-                    <i class="fa-regular fa-circle-check" style="color: green;" ></i></td><font></font>
-                  </tr><font></font>
-                  <tr><font></font>
-                <td>Row Data 1</td><font></font>
-                <td>Row Data 2</td><font></font>
-                <td>Row Data 3</td><font></font>
-                <td>Row Data 4</td><font></font>
-                <td>Row Data 5</td><font></font>
-                <td>Row Data 6</td><font></font>
-                <td>Row Data 7</td><font></font>
-                <td>
-                  <i class="fa-solid fa-pen-to-square" style="color: green;" ></i>
-                  <i class="fa-regular fa-circle-xmark" style="color: red;"></i>
-                  </tr><font></font>
-                  <tr><font></font>
-                <td>Row Data 1</td><font></font>
-                <td>Row Data 2</td><font></font>
-                <td>Row Data 3</td><font></font>
-                <td>Row Data 4</td><font></font>
-                <td>Row Data 5</td><font></font>
-                <td>Row Data 6</td><font></font>
-                <td>Row Data 7</td><font></font>
-                <td>
-                  <i class="fa-solid fa-pen-to-square" style="color: green;" ></i>
-                  <i class="fa-regular fa-circle-check" style="color: green;" ></i></td><font></font>
+                  <!-- Checked switch -->
+                  <div class="form-check form-check-inline form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                  </div>
+                  </td><font></font>
                   </tr><font></font>
                   <tr><font></font>
               <td>Row Data 1</td><font></font>
@@ -250,8 +309,68 @@
               <td>Row Data 6</td><font></font>
               <td>Row Data 7</td><font></font>
               <td>
-                <i class="fa-solid fa-pen-to-square" style="color: green;" ></i>
-                <i class="fa-regular fa-circle-xmark" style="color: red;"></i>
+                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
+                <td>
+                <!-- Checked switch -->
+                <div class="form-check form-check-inline form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                  <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                </div>
+                </td><font></font>
+                  </tr><font></font>
+                  <tr><font></font>
+            <td>Row Data 1</td><font></font>
+            <td>Row Data 2</td><font></font>
+            <td>Row Data 3</td><font></font>
+            <td>Row Data 4</td><font></font>
+            <td>Row Data 5</td><font></font>
+            <td>Row Data 6</td><font></font>
+            <td>Row Data 7</td><font></font>
+            <td>
+              <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
+              <td>
+              <!-- Checked switch -->
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+              </div>
+              </td><font></font>
+                  </tr><font></font>
+                  <tr><font></font>
+          <td>Row Data 1</td><font></font>
+          <td>Row Data 2</td><font></font>
+          <td>Row Data 3</td><font></font>
+          <td>Row Data 4</td><font></font>
+          <td>Row Data 5</td><font></font>
+          <td>Row Data 6</td><font></font>
+          <td>Row Data 7</td><font></font>
+          <td>
+            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
+            <td>
+            <!-- Checked switch -->
+            <div class="form-check form-check-inline form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+              <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+            </div>
+            </td><font></font>
+                  </tr><font></font>
+                  <tr><font></font>
+        <td>Row Data 1</td><font></font>
+        <td>Row Data 2</td><font></font>
+        <td>Row Data 3</td><font></font>
+        <td>Row Data 4</td><font></font>
+        <td>Row Data 5</td><font></font>
+        <td>Row Data 6</td><font></font>
+        <td>Row Data 7</td><font></font>
+        <td>
+          <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_emergente_proveedores"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
+          <td>
+          <!-- Checked switch -->
+          <div class="form-check form-check-inline form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+            <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+          </div>
+          </td><font></font>
                   </tr><font></font>
                 
               </tbody><font></font>
@@ -261,9 +380,92 @@
       </div>
     </div>
   </section>
+  <!-- Botón Modificar proveedor.  -->
+  <div class="modal fade" id="edit_emergente_proveedores" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i class="fa-solid fa-user-pen" style="color: #de8b13;"></i> Modificación Proveedores</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+        </div >
+        <div class="modal-body" style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
+          <div class="mb-3" size="20">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+              <div class="valid-feedback">
+                ¡Dato Valido!
+              </div>
+              <div class="invalid-feedback">
+                Por favor, elije un nombre para el proveedor.
+              </div>
+              <label for="floatingInput" for="validationCustom01" class="form-label">Nombre Proveedor</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+              <div class="valid-feedback">
+                ¡Dato Valido!
+              </div>
+              <div class="invalid-feedback">
+                Por favor, elije un NIT para el proveedor.
+              </div>
+              <label for="floatingInput" for="validationCustom01" class="form-label">NIT</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+              <div class="valid-feedback">
+                ¡Dato Valido!
+              </div>
+              <div class="invalid-feedback">
+                Por favor, elije un teléfono para el proveedor.
+              </div>
+              <label for="floatingInput" for="validationCustom01" class="form-label">Teléfono</label>
+            </div>
+            <div class="mb-3">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Selecciona un método de pago</option>
+                <option value="1">Transferencia</option>
+                <option value="2">Efectivo</option>
+                <option value="3">Tarjeta</option>
+              </select>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+              <div class="valid-feedback">
+                ¡Dato Valido!
+              </div>
+              <div class="invalid-feedback">
+                Por favor, elije un teléfono para el proveedor.
+              </div>
+              <label for="floatingInput" for="validationCustom01" class="form-label">Nombre Encargado</label>
+            </div>
+            <div class="mb-3">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Tipo documento encargado</option>
+                <option value="1">Cédula</option>
+                <option value="2">Pasaporte</option>
+                <option value="3">PEP</option>
+              </select>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+              <div class="valid-feedback">
+                ¡Dato Valido!
+              </div>
+              <div class="invalid-feedback">
+                Por favor, elije un numero de documento para el proveedor.
+              </div>
+              <label for="floatingInput" for="validationCustom01" class="form-label">Numero Documento</label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" style="background-color: rgb(222, 139, 19); border: #de8b13;">Guardar Cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-
-    
     <footer>
       <footer class="text-center text-white" style="background-image: url(https://img.freepik.com/vector-gratis/fondo-blanco-minimo-hexagonos_79603-1452.jpg?w=1380&t=st=1687031635~exp=1687032235~hmac=b6edce497094422b856cdb7557bebe7d81f867068ee451ccbd9e7f3f9631595b);">
         <!-- Grid container -->
