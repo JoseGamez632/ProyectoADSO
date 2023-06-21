@@ -38,6 +38,9 @@
     margin: 50px;
   }
 
+  .tablaProductos{
+    margin: 50px;
+  }
 
   th, thead{
     position: sticky;
