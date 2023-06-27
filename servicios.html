@@ -20,7 +20,7 @@
     
 
 
-    <title>Compras</title>
+    <title>Servicios</title>
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <!-- DataTables JBootstrap -->
@@ -56,17 +56,17 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav">
                     <a href="proveedores.html" class="nav-item nav-link">Proveedores</a>
-                    <a href="compras.html" class="nav-item nav-link active">Compras</a>
+                    <a href="compras.html" class="nav-item nav-link">Compras</a>
                     <a href="productos.html" class="nav-item nav-link">Productos</a>
                     <a href="ventas.html" class="nav-item nav-link">Ventas</a>
                     <a href="clientes.html" class="nav-item nav-link">Cliente</a>
                     <a href="insumos.html" class="nav-item nav-link">Insumos</a>
-                    <a href="servicios.html" class="nav-item nav-link">Servicios</a>
+                    <a href="servicios.html" class="nav-item nav-link active">Servicios</a>
                     <a href="#" class="nav-item nav-link disabled" tabindex="-1">Usuarios</a>
                 </div>
                 <button class="floating-button" class="btn btn-warning btn-rounded"
                 type="button" data-bs-toggle="offcanvas" 
-                data-bs-target="#offcanvas" aria-controls="offcanvas"><i class="fa-solid fa-boxes-packing" style="color: #ffffff;"></i>  Agregar Nueva Compra
+                data-bs-target="#offcanvas" aria-controls="offcanvas"><i class="fa-solid fa-screwdriver-wrench" style="color: #ffffff;"></i>  Agregar Nuevo Servicio
                 </button>
 
                 <div class="navbar-nav ms-auto">
@@ -76,7 +76,7 @@
         </div>
     </nav>
     </header>
-    <!-- Botón agegar nueva compra.  -->
+    <!-- Botón agegar nuevo servicio.  -->
     <section class="proveedores y filt" >
       <!-- Contenido de off canvas  -->
       <div  class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel" 
@@ -85,16 +85,27 @@
         <div class="offcanvas-body">
 
           <div class="offcanvas-header">
-            <h3 class="offcanvas-title" style="color: rgb(255, 255, 255);"><i class="fa-solid fa-boxes-packing" style="color: #ffffff;"></i> Datos Compra</h3>
+            <h3 class="offcanvas-title" style="color: rgb(255, 255, 255);"><i class="fa-solid fa-screwdriver-wrench" style="color: #ffffff;"></i>  Datos Servicio</h3>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="mb-3" size="20">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+              <div class="valid-feedback">
+                ¡Dato Valido!
+              </div>
+              <div class="invalid-feedback">
+                Por favor, elije un teléfono para el proveedor.
+              </div>
+              <label for="floatingInput" for="validationCustom01" class="form-label">Nombre servicio</label>
+            </div>
             <div class="mb-3">
               <select class="form-select" aria-label="Default select example">
-                <option selected>Nombre proveedor</option>
-                <option value="1">Productos Adhesivos JC</option>
-                <option value="2">Made Centro</option>
-                <option value="3">Pinturas De Calidad</option>
+                <option selected>Categoria</option>
+                <option value="1">Mantenimiento</option>
+                <option value="2">Restauración</option>
+                <option value="3">Limpieza</option>
+                <option value="4">Ensamble</option>
               </select>
             </div>
             <div class="form-floating mb-3">
@@ -105,15 +116,11 @@
               <div class="invalid-feedback">
                 Por favor, elije un teléfono para el proveedor.
               </div>
-              <label for="floatingInput" for="validationCustom01" class="form-label">Encargado de compra</label>
+              <label for="floatingInput" for="validationCustom01" class="form-label">Pago Servicio Eje: 50.000</label>
             </div>
-            <div class="mb-3">
-              <select class="form-select" aria-label="Default select example">
-                <option selected>Medio de pago</option>
-                <option value="1">Efectivo</option>
-                <option value="2">Tarjeta</option>
-                <option value="3">Consignación</option>
-              </select>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1" style="color: white;">Descripción del servicio</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
           </div>
           <center>
@@ -136,12 +143,12 @@
             <table id="table_id" class="display"><font></font>
               <thead style="background-color: rgba(6, 48, 82, 0.678); color: rgb(255, 255, 255);"><font></font>
                   <tr><font></font>
-                      <th>ID Compra</th><font></font>
-                      <th>Fecha Compra</th><font></font>
-                      <th>Nombre Proveedor</th><font></font>
-                      <th>Total Compra</th><font></font>
-                      <th>Medio De Pago</th><font></font>
-                      <th>Detalle<br>Compra</th><font></font>
+                      <th>ID Servicio</th><font></font>
+                      <th>Fecha Servicio</th><font></font>
+                      <th>Nombre Servicio</th><font></font>
+                      <th>Categoria</th><font></font>
+                      <th>Descripción</th><font></font>
+                      <th>Pago Servicio</th><font></font>
                       <th>Editar</th><font></font>
                       <th>Estado<br>actual</th><font></font>
                   </tr><font></font>
@@ -150,14 +157,14 @@
                   <tr><font></font>
                       <td>0001</td><font></font>
                       <td>12/31/2023</td><font></font>
-                      <td>Made Centro</td><font></font>
-                      <td>2.500.000</td><font></font>
-                      <td>Efectivo</td><font></font>
+                      <td>Cambio espaldar silla</td><font></font>
+                      <td>Mantenimiento</td><font></font>
                       <td>
                         <button 
-                          type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#no se ha asignado"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
+                          type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#detalle_servicios"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
                         </button>
                       </td><font></font>
+                      <td>75.000</td><font></font>
                       <td>
                         <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
                         <td>
@@ -171,14 +178,14 @@
                   <tr><font></font>
                     <td>0001</td><font></font>
                     <td>12/31/2023</td><font></font>
-                    <td>Made Centro</td><font></font>
-                    <td>2.500.000</td><font></font>
-                    <td>Efectivo</td><font></font>
+                    <td>Cambio espaldar silla</td><font></font>
+                    <td>Mantenimiento</td><font></font>
                     <td>
                       <button 
-                        type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#no se ha asignado"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
+                        type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#detalle_servicios"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
                       </button>
                     </td><font></font>
+                    <td>75.000</td><font></font>
                     <td>
                       <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
                       <td>
@@ -190,46 +197,130 @@
                       </td><font></font>
                   </tr><font></font>
                   <tr><font></font>
-                    <td>0001</td><font></font>
-                    <td>12/31/2023</td><font></font>
-                    <td>Made Centro</td><font></font>
-                    <td>2.500.000</td><font></font>
-                    <td>Efectivo</td><font></font>
+                  <td>0001</td><font></font>
+                  <td>12/31/2023</td><font></font>
+                  <td>Cambio espaldar silla</td><font></font>
+                  <td>Mantenimiento</td><font></font>
+                  <td>
+                    <button 
+                      type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#detalle_servicios"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
+                    </button>
+                  </td><font></font>
+                  <td>75.000</td><font></font>
+                  <td>
+                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
                     <td>
-                      <button 
-                        type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#no se ha asignado"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
-                      </button>
+                    <!-- Checked switch -->
+                    <div class="form-check form-check-inline form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                      <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                    </div>
                     </td><font></font>
-                    <td>
-                      <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
-                      <td>
-                      <!-- Checked switch -->
-                      <div class="form-check form-check-inline form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
-                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                      </div>
-                      </td><font></font>
                   </tr><font></font>
                   <tr><font></font>
-                    <td>0001</td><font></font>
-                    <td>12/31/2023</td><font></font>
-                    <td>Made Centro</td><font></font>
-                    <td>2.500.000</td><font></font>
-                    <td>Efectivo</td><font></font>
-                    <td>
-                      <button 
-                        type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#no se ha asignado"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
-                      </button>
-                    </td><font></font>
-                    <td>
-                      <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
-                      <td>
-                      <!-- Checked switch -->
-                      <div class="form-check form-check-inline form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
-                        <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
-                      </div>
-                      </td><font></font>
+                <td>0001</td><font></font>
+                <td>12/31/2023</td><font></font>
+                <td>Cambio espaldar silla</td><font></font>
+                <td>Mantenimiento</td><font></font>
+                <td>
+                  <button 
+                    type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#detalle_servicios"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
+                  </button>
+                </td><font></font>
+                <td>75.000</td><font></font>
+                <td>
+                  <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
+                  <td>
+                  <!-- Checked switch -->
+                  <div class="form-check form-check-inline form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                  </div>
+                  </td><font></font>
+                  </tr><font></font>
+                  <tr><font></font>
+              <td>0001</td><font></font>
+              <td>12/31/2023</td><font></font>
+              <td>Cambio espaldar silla</td><font></font>
+              <td>Mantenimiento</td><font></font>
+              <td>
+                <button 
+                  type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#detalle_servicios"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
+                </button>
+              </td><font></font>
+              <td>75.000</td><font></font>
+              <td>
+                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
+                <td>
+                <!-- Checked switch -->
+                <div class="form-check form-check-inline form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                  <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+                </div>
+                </td><font></font>
+                  </tr><font></font>
+                  <tr><font></font>
+            <td>0001</td><font></font>
+            <td>12/31/2023</td><font></font>
+            <td>Cambio espaldar silla</td><font></font>
+            <td>Mantenimiento</td><font></font>
+            <td>
+              <button 
+                type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#detalle_servicios"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
+              </button>
+            </td><font></font>
+            <td>75.000</td><font></font>
+            <td>
+              <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
+              <td>
+              <!-- Checked switch -->
+              <div class="form-check form-check-inline form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+              </div>
+              </td><font></font>
+                  </tr><font></font>
+                  <tr><font></font>
+          <td>0001</td><font></font>
+          <td>12/31/2023</td><font></font>
+          <td>Cambio espaldar silla</td><font></font>
+          <td>Mantenimiento</td><font></font>
+          <td>
+            <button 
+              type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#detalle_servicios"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
+            </button>
+          </td><font></font>
+          <td>75.000</td><font></font>
+          <td>
+            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
+            <td>
+            <!-- Checked switch -->
+            <div class="form-check form-check-inline form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+              <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+            </div>
+            </td><font></font>
+                  </tr><font></font>
+                  <tr><font></font>
+        <td>0001</td><font></font>
+        <td>12/31/2023</td><font></font>
+        <td>Cambio espaldar silla</td><font></font>
+        <td>Mantenimiento</td><font></font>
+        <td>
+          <button 
+            type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#detalle_servicios"><i class="fa-solid fa-circle-info" style="color: #de8b13;"></i>
+          </button>
+        </td><font></font>
+        <td>75.000</td><font></font>
+        <td>
+          <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#edit_detall_compra"><i class="fa-solid fa-pen-to-square" style="color: green;"></i></button>
+          <td>
+          <!-- Checked switch -->
+          <div class="form-check form-check-inline form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+            <label class="form-check-label" for="flexSwitchCheckChecked">Activo</label>
+          </div>
+          </td><font></font>
                   </tr><font></font>
                 
               </tbody><font></font>
@@ -239,127 +330,51 @@
       </div>
     </div>
   </section>
-    <!-- Botón Agregar detalles de compra.  -->
+    <!-- Botón Editar Servicio.  -->
     <div class="modal fade modal fade-sm" id="edit_detall_compra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" >
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i class="fa-solid fa-boxes-packing" style="color: #de8b13;"></i>  Modificar Información Compra</h5>
+            <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i class="fa-solid fa-screwdriver-wrench" style="color: #de8b13;"></i>  Modificar Información Servicio</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
           </div >
           <div class="modal-body" style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
             <div class="mb-3" size="20">
-              <table class="table">
-                <thead>
-                  <tr style="color: white;">
-                    <th scope="col"><center>Nombre de Insumo</center></th>
-                    <th scope="col"><center>Cantidad</center></th>
-                    <th scope="col"><center>Medida<br>Compra</center></th>
-                    <th scope="col"><center>Precio Total</center></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <center>
-                          <select class="form-select form-select-sm" aria-label="Default select example">
-                            <option selected> </option>
-                            <option value="1">Cuero fino </option>
-                            <option value="2">Caucho blanco</option>
-                            <option value="3">Papel Madera</option>
-                            <option value="4">Plástico</option>
-                            <option value="5">Aluminio</option>
-                          </select>
-                      </center>
-                  </td>
-                    <th>
-                      <center>
-                        <input class="form-control form-control-sm" type="text" placeholder="Eje: 2.5">
-                      </center>
-                    </th>
-                    <td><center>
-                      <select class="form-select form-select-sm" aria-label="Default select example">
-                        <option selected> </option>
-                        <option value="1">kilogramo</option>
-                        <option value="2">Metro</option>
-                        <option value="3">Unidades</option>
-                        <option value="4">Litros</option>
-                      </select>
-                    </center></td>
-                    <td>
-                      <center>
-                        <input class="form-control form-control-sm" type="text" placeholder="2.000.000">
-                      </center>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <center>
-                          <select class="form-select form-select-sm" aria-label="Default select example">
-                            <option selected> </option>
-                            <option value="1">Cuero fino </option>
-                            <option value="2">Caucho blanco</option>
-                            <option value="3">Papel Madera</option>
-                            <option value="4">Plástico</option>
-                            <option value="5">Aluminio</option>
-                          </select>
-                      </center>
-                  </td>
-                    <th>
-                      <center>
-                        <input class="form-control form-control-sm" type="text" placeholder="Eje: 2.5">
-                      </center>
-                    </th>
-                    <td><center>
-                      <select class="form-select form-select-sm" aria-label="Default select example">
-                        <option selected> </option>
-                        <option value="1">kilogramo</option>
-                        <option value="2">Metro</option>
-                        <option value="3">Unidades</option>
-                        <option value="4">Litros</option>
-                      </select>
-                    </center></td>
-                    <td>
-                      <center>
-                        <input class="form-control form-control-sm" type="text" placeholder="2.000.000">
-                      </center>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <center>
-                          <select class="form-select form-select-sm" aria-label="Default select example">
-                            <option selected> </option>
-                            <option value="1">Cuero fino </option>
-                            <option value="2">Caucho blanco</option>
-                            <option value="3">Papel Madera</option>
-                            <option value="4">Plástico</option>
-                            <option value="5">Aluminio</option>
-                          </select>
-                      </center>
-                  </td>
-                    <th>
-                      <center>
-                        <input class="form-control form-control-sm" type="text" placeholder="Eje: 2.5">
-                      </center>
-                    </th>
-                    <td><center>
-                      <select class="form-select form-select-sm" aria-label="Default select example">
-                        <option selected> </option>
-                        <option value="1">kilogramo</option>
-                        <option value="2">Metro</option>
-                        <option value="3">Unidades</option>
-                        <option value="4">Litros</option>
-                      </select>
-                    </center></td>
-                    <td>
-                      <center>
-                        <input class="form-control form-control-sm" type="text" placeholder="2.000.000">
-                      </center>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="mb-3" size="20">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                  <div class="valid-feedback">
+                    ¡Dato Valido!
+                  </div>
+                  <div class="invalid-feedback">
+                    Por favor, elije un teléfono para el proveedor.
+                  </div>
+                  <label for="floatingInput" for="validationCustom01" class="form-label">Nombre servicio</label>
+                </div>
+                <div class="mb-3">
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Categoria</option>
+                    <option value="1">Mantenimiento</option>
+                    <option value="2">Restauración</option>
+                    <option value="3">Limpieza</option>
+                    <option value="4">Ensamble</option>
+                  </select>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                  <div class="valid-feedback">
+                    ¡Dato Valido!
+                  </div>
+                  <div class="invalid-feedback">
+                    Por favor, elije un teléfono para el proveedor.
+                  </div>
+                  <label for="floatingInput" for="validationCustom01" class="form-label">Pago Servicio Eje: 50.000</label>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1" style="color: white;">Descripción del servicio</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+              </div>
             </div>
           </div>
           <div class="modal-footer">
@@ -369,6 +384,29 @@
         </div>
       </div>
     </div>
+    <!-- Botón Descripción Servicio.  -->
+    <div class="modal fade modal fade-sm" id="detalle_servicios" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(222, 139, 19);"><i class="fa-solid fa-circle-exclamation" style="color: #de8b13;"></i>  Descripción servicio</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+          </div >
+          <div class="modal-body" style="background-image: url(https://img.freepik.com/vector-gratis/fondo-memphis-semitono-azul-lineas-amarillas-formas-circulos_1017-31954.jpg?w=1380&t=st=1687029132~exp=1687029732~hmac=83937288de881d23b131b303de48306fcac11c20bea9a6e36d4a6df1fca014fd);">
+            <div class="alert alert-warning" role="alert">
+              Relleno y acolchado:<br><br>
+              Se agrega el relleno adecuado para darle comodidad y forma al mueble.
+              Dependiendo del diseño y el estilo deseado, se pueden utilizar diferentes capas de relleno, como espuma, algodón, plumas o fibra sintética.
+              Se utilizan técnicas de acolchado para crear diseños y formas específicas en el mueble, como capstone o costuras decorativas.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <footer>
       <footer class="text-center text-white" style="background-image: url(https://img.freepik.com/vector-gratis/fondo-blanco-minimo-hexagonos_79603-1452.jpg?w=1380&t=st=1687031635~exp=1687032235~hmac=b6edce497094422b856cdb7557bebe7d81f867068ee451ccbd9e7f3f9631595b);">
         <!-- Grid container -->
