@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   </head>
-      <script>
+    <script>
         $(document).ready( function () {
             $('#table_id').DataTable(
                 {
@@ -64,11 +64,6 @@
                     <a href="servicios.html" class="nav-item nav-link">Servicios</a>
                     <a href="#" class="nav-item nav-link disabled" tabindex="-1">Usuarios</a>
                 </div>
-                <button class="floating-button" class="btn btn-warning btn-rounded"
-                type="button" data-bs-toggle="offcanvas" 
-                data-bs-target="#offcanvas" aria-controls="offcanvas"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i> Agregar Proveedor
-                </button>
-
                 <div class="navbar-nav ms-auto">
                     <a href="login.html" class="nav-item nav-link">Cerrar Sesión</a>
                 </div>
@@ -77,8 +72,8 @@
     </nav>
     </header>
     <!-- Botón agegar nuevo proveedor.  -->
-    <section class="proveedores y filt" >
-
+    <section class="add_nuevo" >
+    
 
       <!-- Contenido de off canvas  -->
       <div  class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel" 
@@ -177,6 +172,10 @@
       <div class="row">
         <div class="col">
           <div class="table-responsive">
+            <button class="floating-button" class="btn btn-warning btn-rounded"
+            type="button" data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvas" aria-controls="offcanvas"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i> Agregar Proveedor
+            </button>
             <table id="table_id" class="display"><font></font>
               <thead style="background-color: rgba(6, 48, 82, 0.678); color: rgb(255, 255, 255);"><font></font>
                   <tr><font></font>
@@ -362,6 +361,7 @@
       </div>
     </div>
   </section>
+
   <!-- Botón Modificar proveedor.  -->
   <div class="modal fade" id="edit_emergente_proveedores" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" >
@@ -454,7 +454,7 @@
         <div class="container p-4">
           <!-- Section: Images -->
           <section class="">
-            <h3 style="color: rgb(6, 48, 82)">Nuestros Productos Insignias</h3>
+            <h3 style="color: rgb(6, 48, 82); font: size 20px;;">Nuestros Productos Insignias</h3>
             <div class="row">
               <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
                 <div
