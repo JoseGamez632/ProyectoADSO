@@ -28,7 +28,7 @@
     padding: 10px 10px;
     font-size: 18px;
     transition: all 0.2s ease-in-out;
-    animation:rotate-center 1s} @keyframes rotate-center{0%{transform:rotate(0)}100%{transform:rotate(360deg)}
+    animation:rotate-center 1s} @keyframes rotate-center{0%{transform:rotate(0)}100%{transform:rotate(360deg)};
   }
   
   .floating-button:hover {
